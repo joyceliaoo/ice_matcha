@@ -1,5 +1,9 @@
-var drawBox = true;
+// Team gg3 - Joyce Liao, Susan Lin
+// SoftDev2 pd8
+// K01 -- ...and I want to Paint It Better
+// 2019-01-31
 
+var drawBox = true;
 
 var canvas = document.getElementById("slate");
 var ctx = canvas.getContext("2d");
@@ -22,7 +26,7 @@ mode.addEventListener("click", changeMode);
 
 var drawShape = function(e) {
     // console.log(e);
-    // coordinates of mouse
+    // coordinates of where event occurred w.r.t. the target node
     var mouseX = e.offsetX;
     var mouseY = e.offsetY;
     ctx.fillStyle = "#6bf9d1";
