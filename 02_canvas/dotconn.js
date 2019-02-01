@@ -13,19 +13,16 @@ var clearCanvas = function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     // clear existing path
     ctx.beginPath();
+    previousX = undefined;
+    previousY = undefined;
 }
 clear.addEventListener("click", clearCanvas);
 
-var drawShape = function(e) {
-    // console.log(e);
-    // coordinates of where event occurred w.r.t. the target node
-    var mouseX = e.offsetX;
-    var mouseY = e.offsetY;
-    // moves path to position (x,y) : draws a line and fills section
-    // draw line to where new circle is
-    ctx.lineTo(mouseX, mouseY);
-    // draw path
-    ctx.stroke();
+// location where the last event occured
+var previousX;
+var previousY;
+
+function drawDot(mouseX, mouseY) {
     // start new path for a new circle
     ctx.beginPath();
     // add ellipse to path
@@ -33,11 +30,31 @@ var drawShape = function(e) {
     // fills interior of the path
     // will not work if path has fewer than 3 points in it
     ctx.fill();
+
+};
+
+function connect(mouseX, mouseY) {
     // start new path
     ctx.beginPath();
-    // moves path to position (x,y) without drawing a line or filling section
     // move to old mouse location
-    ctx.moveTo(mouseX, mouseY);
+    ctx.moveTo(previousX, previousY);
+    // draw line to where new circle is
+    ctx.lineTo(mouseX, mouseY);
+    // draw path
+    ctx.stroke();
+}
+
+var drawShape = function(e) {
+    // console.log(e);
+
+    drawDot(e.offsetX, e.offsetY);
+
+    if (previousX != undefined) { // if not first dot
+        connect(e.offsetX, e.offsetY);
+    }
+    // update location of last event
+    previousX = e.offsetX;
+    previousY = e.offsetY;
 };
 canvas.addEventListener("click", drawShape);
 
