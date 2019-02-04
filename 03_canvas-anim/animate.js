@@ -30,20 +30,20 @@ var halt = function(e) {
 function draw() { // draw each frame
 
 	requestID = window.requestAnimationFrame(draw);
-    // console.log(requestID);
+	// console.log(requestID);
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // clear previous frame
+	ctx.clearRect(0, 0, canvas.width, canvas.height); // clear previous frame
 
 	ctx.beginPath();
 	// console.log(radius);
-    // arc(x, y, radius, startAngle, endAngle)
+	// arc(x, y, radius, startAngle, endAngle)
 	ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, Math.PI * 2);
 	ctx.fill();
 
-    if (radius >= max || radius == 0) { // radius is at max or min, reverse current mode
-        // console.log("mode swap");
-        growing = !growing;
-    }
+	if (radius >= max || radius == 0) { // radius is at max or min, reverse current mode
+	    // console.log("mode swap");
+	    growing = !growing;
+	}
 
 	if (growing) radius += 1; // expand
 	else radius -= 1; // contract
