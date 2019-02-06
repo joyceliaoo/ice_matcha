@@ -1,8 +1,8 @@
 // happy cows
 // Aaron Li, Joyce Liao
 // SoftDev2 pd8
-// K03 -- They lock us in the tower whenever we get caught
-// 2019-02-04
+// K04 -- What is it saving the screen from?
+// 2019-02-06
 
 // variables
 var canvas = document.getElementById("playground"); // canvas element
