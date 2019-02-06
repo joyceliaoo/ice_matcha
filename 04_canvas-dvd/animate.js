@@ -61,17 +61,17 @@ var draw = function(e) {
 var dvder = function(e) {
 	window.cancelAnimationFrame(requestID);
 
-    // width and height of logo
+	// width and height of logo
 	var rectW = 100;
 	var rectH = 50;
-    // location of logo
+	// location of logo
 	var rectX = Math.floor(Math.random() * (canvas.width - rectW));
 	var rectY = Math.floor(Math.random() * (canvas.width - rectH));
-    // motion of logo
+	// motion of logo
 	var xVel = 1;
 	var yVel = 1;
 
-    // create new image object
+	// create new image object
 	var logo = new Image();
 	logo.src = "logo_dvd.jpg";
 
@@ -85,7 +85,7 @@ var dvder = function(e) {
 		// console.log(rectY);
 		ctx.drawImage(logo, rectX, rectY, rectW, rectH);
 
-        // rectX is the top left corner, add rectW to get top right corner
+		// rectX is the top left corner, add rectW to get top right corner
 		if (rectX + rectW >= canvas.width) {
 			xVel = -1;
 		} else if (rectY <= 0) {
@@ -101,7 +101,6 @@ var dvder = function(e) {
 	};
 
 	dvdLogo();
-
 };
 
 
