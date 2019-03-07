@@ -1,4 +1,4 @@
-#Team -- Joyce Liao, Aaron Li, Joan Chrisionos
+#Team -- Joyce Liao, Aaron Li, Joan Chirinos
 #SoftDev1 pd8
 #K08 -- Ay Mon, Go Git It From Yer Flask
 #2019-03-08
