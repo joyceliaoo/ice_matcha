@@ -27,10 +27,11 @@ def getData():
 
 @app.route("/launch", methods=["POST"])
 def launch():
+    addr = request.form.get("ip")
     try:
-        addr = request.form.get("ip")
         mongo.launchDB(addr)
     except:
+        mongo.launchDB("localhost")
         flash("Invalid server address")
     return redirect(url_for("home"))
 
