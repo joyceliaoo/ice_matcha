@@ -5,7 +5,12 @@
 	</head>
 	<body>
 		<h2> Results </h2>
+		{% set msgs = get_flashed_messages() %}
+			{% for each in msgs %}
+			  <p> {{each}} </p>
+			{% endfor %}
 		<a href="/">Home</a>
+
         {% for entry in data %}
             <p> Year awarded: {{entry["year"]}}</p>
 			<p> Category: {{entry["category"]}}</p>
