@@ -1,3 +1,8 @@
+// Joyce Liao
+// SoftDev pd8
+// K09 -- basic SVG work
+// 2019-03-13w
+
 var pic = document.getElementById("vimage");
 var clear = document.getElementById("but_clear");
 
