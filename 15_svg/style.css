@@ -1,0 +1,26 @@
+line {
+    stroke: gray;
+    stroke-width: 3px;
+}
+
+.title {
+    fill: purple;
+    font: bold 25px sans-serif;
+}
+
+.axis {
+    fill: orange;
+    font: bold 15px sans-serif;
+}
+
+circle {
+    fill: gold;
+    r: 10;
+}
+
+.description {
+    fill: gray;
+    font: italic 15px serif;
+    display: block;
+    padding-left: 50px;
+}
