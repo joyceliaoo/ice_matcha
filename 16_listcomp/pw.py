@@ -1,3 +1,8 @@
+# Joyce Liao
+# SoftDev2 pd8
+# K16 -- Do You Even List?
+# 2019-04-12
+
 UC_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 LC_LETTERS = UC_LETTERS.lower()
 NUMS = "0123456789"
