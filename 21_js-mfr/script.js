@@ -1,3 +1,8 @@
+// Joyce Liao
+// Softdev2 pd8
+// K21 -- Onions, Bell Peppers, and Celery, Oh My!
+// M 2019-04-29
+
 // average enrollment in schools with a female enrollment of more than 50% in the 2005-2006 school year
 var female_maj = json.filter(function(n) {
     return (n["schoolyear"] == "20052006" && n["female_per"] > 50)
