@@ -1,6 +1,6 @@
 # Joyce Liao
 # SoftDev2 pd8
-# K23 --
+# K23 -- Memoize
 # 2019-05-01
 
 # memoized fib calculator
