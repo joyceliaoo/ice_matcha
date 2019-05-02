@@ -8,12 +8,12 @@ def memoize(f):
 	memo = {}
 	def helper(x):
 		nonlocal memo
-		# print("checking" + str(x))
+		# print("checking " + str(x))
 		if (x in memo.keys()):
-			# print(str(x) + "already in memo, returning ...")
+			# print(str(x) + " already in memo, returning ...")
 			return memo[x] 
 		else:
-			# print(str(x) + "not in memo, calling fib")
+			# print(str(x) + " not in memo, calling fib")
 			ans = f(x)
 			# print("fib gave answer")
 			memo[x] = ans 
@@ -30,7 +30,9 @@ def fib(n):
 	else:
 		return fib(n-1) + fib(n-2)
 
-fib = memoize(fib)
+# print(fib)
+fib = memoize(fib) # fib now refers to helper function
+# print(fib)
 print(fib(3))
 print(fib(30))
 print(fib(100))
